@@ -1,0 +1,88 @@
+.ac-container{
+	width: 100%;
+	text-align: left;
+}
+.ac-container label{
+	position: relative;
+	z-index: 20;
+	display: block;
+	cursor: pointer;
+	color: #000000;
+	font-size: 14px;
+	background-color: #ffffff;
+	background-position: 95% 17px;
+	padding-top: 11px;
+	padding-right: 11px;
+	padding-bottom: 11px;
+	padding-left: 11px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d6d6;
+	background-image: url(../images/p-aroe.png);
+	background-repeat: no-repeat;
+}
+.ac-container label:hover{
+	background-color: #e2e2e2;
+background-image: url(../images/m-arow.png);	
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background-color: #e2e2e2;
+	background-image: url(../images/m-arow.png);	
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	right: 13px;
+	top: 7px;
+	background: transparent url(../images/arrow_down.png) no-repeat center center;	
+}
+.ac-container input:checked + label:hover:after{
+	background-image: url(../images/arrow_up.png);
+}
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+.ac-container article p{
+	font-style: italic;
+	color: #777;
+	line-height: 23px;
+	font-size: 14px;
+	padding: 20px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+.ac-container input:checked ~ article{
+	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container input:checked ~ article.ac-small{
+	height: 251px;
+}
+.ac-container input:checked ~ article.ac-medium{
+	height: 251px;
+}
+.ac-container input:checked ~ article.ac-large{
+	height: 251px;
+}
+.border-g{	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d6d6;}
