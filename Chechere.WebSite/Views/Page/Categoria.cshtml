@@ -1,0 +1,473 @@
+﻿@model Plenum.Models.PlenumPageDataModel
+
+@using Plenum.Models
+@using Plenum.Business
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = Model.Page.Name;
+    ViewBag.MetaKeywords = Model.Page.GetFieldValue("MetaKeywords");
+    ViewBag.MetaDescription = Model.Page.GetFieldValue("MetaDescription");
+
+    List<PageDataModel> products = PageBO.GetInstance().GetPageByPage(Convert.ToInt32(Model.Page.ID));
+}
+
+
+
+<div class="home-link">
+    <a href="/">Inicio</a>
+    <a href="#">@Model.Page.Name</a>
+</div>
+
+
+<div class="product-full">
+
+    <div class="left-box">
+
+        <div class="left-link-box">
+            <div class="left-heading">
+                <div class="left-heading-text">Nuestras Categor&iacute;as</div>
+            </div>
+        </div>
+
+        <!--
+
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Filtrar por</div>
+
+            <div class="panel-box">
+                <section class="ac-container">
+                    <div class="border-g">
+                        <input id="ac-1" name="accordion-1" type="radio" checked />
+                        <label for="ac-1">Category</label>
+                        <article class="ac-small">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-2" name="accordion-1" type="radio" />
+                        <label for="ac-2">Brand</label>
+                        <article class="ac-medium">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-3" name="accordion-1" type="radio" />
+                        <label for="ac-3">Color</label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-4" name="accordion-1" type="radio" />
+                        <label for="ac-4">Offer</label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="border-g">
+                        <input id="ac-5" name="accordion-1" type="radio" />
+                        <label for="ac-5">Apparel Men Size </label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+        </div>
+
+        -->
+
+        <!--
+
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Price Filter</div>
+            <div class="bar-box">
+                <img src="images/bar.png" width="235" height="18" border="0" align="left" />
+                <div class="prize-1">$22</div>
+                <div class="prize-2">$1325</div>
+            </div>
+
+        </div>
+
+            -->
+
+        <!-- 
+        <div class="left-blue-box1">
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">1 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">2 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">3 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">4 Person</div>
+            </div>
+        </div>
+
+            -->
+        <!--
+        
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Featured Products</div>
+
+            <div class="left-product-box">
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p2.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Hi Neck Men Shoe  </div>
+                        <div class="p-prize">$60.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p3.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Women' s Trouser</div>
+                        <div class="p-prize">$48.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p4.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Sports Wear</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p5.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Shirt</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p6.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Denim</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p7.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men ' s Trouser</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p8.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Sandal</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p9.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Women' s Trendy Sandal</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        -->
+
+
+
+    </div>
+
+
+
+    <div class="right-box">
+
+        <!--
+
+        <div class="gray-border">
+
+            <div class="box-453">
+
+                <div class="shop-heading">
+                    <div class="shop-heading-text">Feathured</div>
+                    <div class="shop-border"></div>
+                </div>
+
+                <div class="shop-image-box">
+                    <div class="box150">
+                        <div class="blue-box-shop">
+                            <div class="box-25-tx">25% OFF</div>
+                            <div class="box-25-tx1">Lorem ipsum </div>
+                        </div>
+                        <div class="blue-border"></div>
+                    </div>
+                    <img src="images/shop1.png" width="99%" border="0" align="left" class="shop-border-img" />
+                    <div class="box-110">
+                        <a href="#" class="shop-link">shop now</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="box-317">
+
+                <div class="shop-first">
+
+                    <div class="shop-heading">
+                        <div class="shop-heading-text">best seller</div>
+                        <div class="shop-border1"></div>
+                    </div>
+
+                    <div class="shop-image-box">
+                        <div class="box107">
+                            <div class="red-box-shop">
+                                <div class="box-25-tx2">45% OFF</div>
+                                <div class="box-25-tx3">Lorem ipsum </div>
+                            </div>
+                            <div class="red-border"></div>
+                        </div>
+                        <img src="images/shop2.jpg" width="99%" border="0" align="left" class="shop-border-img" />
+                        <div class="box-68">
+                            <a href="#" class="shop-link1">shop now</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="shop-first1">
+
+                    <div class="shop-image-box">
+                        <div class="box107-yellow">
+                            <div class="yellow-box-shop">
+                                <div class="box-25-tx4">45% OFF</div>
+                                <div class="box-25-tx5">Lorem ipsum </div>
+                            </div>
+                            <div class="yellow-border"></div>
+                        </div>
+                        <img src="images/shop3.jpg" width="99%" border="0" align="left" class="shop-border-img" />
+                        <div class="box-68">
+                            <a href="#" class="shop-link1">shop now</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+        -->
+
+
+        <div class="gray-border">
+
+            <!--
+            <div class="shop-heading">
+                <div class="shop-heading-text2">En esta categoría...</div>                
+            </div>
+                -->
+
+
+            <div class="cat-product">
+
+                @if (products != null && products.Count > 0)
+                {
+                    foreach (var item in products)
+                    {
+                        <div class="box-237">
+                            <div class="imag-product">
+                                <div class="product-prize1">
+                                    <div class="box-61">
+                                        <div class="prize-p">$120.00</div>
+                                    </div>
+                                </div>
+                                <a href="@item.Link"><img src="@item.GetFileFieldUrl("FeaturedImage")" style="width: 230px; height:228px;" border="0" align="left" class="img-border" /></a>                                
+                            </div>
+                            <div class="product-name">@item.Name</div>
+                            <div class="product-name1">Lorem ipsum dolor siamr id tempor  Curabitur iac Lorem ipsum dolor siamr id </div>
+                            <a href="#" class="click-here1">Adicionar al carrito</a>
+                        </div>                        
+                    }
+                    
+                }
+
+                <!-- 
+                <div class="nomber-box">
+                    <a href="#"><< Prev </a>
+                    <a href="#">1 </a>
+                    <a href="#">2 </a>
+                    <a href="#">3 </a>
+                    <a href="#">4 </a>
+                    <a href="#">5 </a>
+                    <a href="#">Next >> </a>
+                </div>
+                    -->
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="contact-b">
+            <div class="footer-blue">
+                <div class="need">Necesitas ayuda?</div>
+                <a href="#" class="click-here-l">Encuéntrala acá</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+

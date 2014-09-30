@@ -1,5 +1,8 @@
 ﻿@model Plenum.Models.PlenumPageDataModel
 
+@using Plenum.Business
+@using Plenum.Models
+
 @{
     
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,6 +10,9 @@
     ViewBag.Title = Model.Page.Name;
     ViewBag.MetaKeywords = Model.Page.GetFieldValue("MetaKeywords");
     ViewBag.MetaDescription = Model.Page.GetFieldValue("MetaDescription");
+
+    List<BaseDataModel> sale = (List<BaseDataModel>)Model.Page.GetFieldValue("Destacados");
+    List<BaseDataModel> offers = (List<BaseDataModel>)Model.Page.GetFieldValue("Ofertas");
 }
 
 
@@ -19,11 +25,11 @@
             </div>
             <div class="left-ul-link">
                 <ul>
-                    <li><a href="#">Camisetas</a></li>
-                    <li><a href="#">Tecnolog&iacute;a</a></li>
-                    <li><a href="#">Art&iacute;culos deportivos</a></li>
-                    <li><a href="#">Perfmer&iacute;a</a></li>
-                    <li><a href="#">Mascotas</a></li>
+                    <li><a href="/Camisetas">Camisetas</a></li>
+                    <li><a href="/Tecnologia">Tecnolog&iacute;a</a></li>
+                    <li><a href="/Articulos-Deportivos">Art&iacute;culos Deportivos</a></li>
+                    <li><a href="/Perfumeria">Perfumer&iacute;a</a></li>
+                    <li><a href="/Mascotas">Mascotas</a></li>
                 </ul>
             </div>
         </div>
@@ -47,120 +53,25 @@
             <div class="box-665">
 
 
+                @if (sale != null && sale.Count > 0)
+                {
+                    foreach (var item in sale)
+                    {
+                        <div class="box-202">
+                            <div class="box-img-101">
+                                <a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link"><img src="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFileFieldUrl("FeaturedImage")" style="width:101px; height:110px;" border="0" align="left" /></a>
+                                <div class="p-rixe">$120.000</div>                    </div>
+                            <div class="heading-p1">&nbsp;</div>
 
+                            <div class="gr-box1"><span class="font-size20">@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Name</span></div>
 
+                            <div class="gr-box0">
+                                Camiseta original Nike
+                            </div>
 
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img1.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p">Lorem ipsum</div>
-
-                    <div class="gr-box"><span class="font-size20">30% </span><strong class="font-size21">OFF</strong></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img2.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p1">Lorem ipsum</div>
-
-                    <div class="gr-box1"><span class="font-size20">15% </span><strong class="font-size21">OFF</strong>  <span class="font-size22">Ael vierra inted</span></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img3.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p2">Lorem ipsum</div>
-
-                    <div class="gr-box2"><span class="font-size20">25% </span><strong class="font-size21">OFF</strong>  <span class="font-size22">Arcu vel vierra i</span></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img4.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p">Lorem ipsum</div>
-
-                    <div class="gr-box3"><span class="font-size20">35% </span><strong class="font-size21">OFF</strong>  <span class="font-size22">BUY ON  DENIM</span></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img5.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p4">Lorem ipsum</div>
-
-                    <div class="gr-box4"><span class="font-size20">20% </span><strong class="font-size21">OFF</strong>  <span class="font-size22">BUY ON 2 T SHIRTS</span></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-                <div class="box-202">
-                    <div class="box-img-101">
-                        <img src="/content/images/img6.png" border="0" align="left" />
-                        <div class="p-rixe">$100.00</div>
-                    </div>
-                    <div class="heading-p5">Lorem ipsum</div>
-
-                    <div class="gr-box5"><span class="font-size20">10% </span><strong class="font-size21">OFF</strong>  <span class="font-size22">BUY ON 2  SHORTS</span></div>
-
-                    <div class="gr-box0">
-                        Etiam congue, arcu vel vierra inted
-vierra inted
-                    </div>
-
-                </div>
-
-
-
-
-
+                        </div>                        
+                    }
+                }
 
 
             </div>
@@ -188,82 +99,38 @@ vierra inted
         <div class="first-product">
 
             <div class="heading-first">
-                <div class="product-headind-text">crazy deals</div>
-                <div class="arow-right">
-                    <img src="/content/images/arow.png" width="52" height="30" border="0" align="right" />
-                </div>
+                <div class="product-headind-text">LAS OFERTAS</div>                
             </div>
 
             <div class="product-main">
 
 
-                <div class="first-product1">
-                    <div class="imag-product">
-                        <div class="product-prize">
-                            <div class="box-61">
-                                <div class="prize-p">$120.00</div>
+                @if (offers != null && offers.Count > 0)
+                {
+                    foreach (var item in offers)
+                    {
+                        <div class="first-product1">
+                            <div class="imag-product">
+                                <div class="product-prize">
+                                    <div class="box-61">
+                                        <div class="prize-p">$120.000</div>
+                                    </div>
+                                </div>
+                                <a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link"><img src="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFileFieldUrl("FeaturedImage")" border="0" style="width:153px; height:154px" align="left" /></a> 
                             </div>
-                        </div>
-                        <img src="/content/images/product1.png" width="100%" border="0" align="left" />
-                    </div>
-                    <div class="product-name">Lorem ipsum dolor</div>
-                    <div class="product-name1">Lorem ipsum dolor siamr id tempor  Curabitur iac Lorem ipsum dolor siamr id </div>
-                    <a href="#" class="click-here1">Add to cart</a>
-                </div>
-
-
-                <div class="first-product1">
-                    <div class="imag-product">
-                        <div class="product-prize">
-                            <div class="box-61">
-                                <div class="prize-p">$120.00</div>
-                            </div>
-                        </div>
-                        <img src="/content/images/prduct2.png" width="100%" border="0" align="left" />
-                    </div>
-                    <div class="product-name">Lorem ipsum dolor</div>
-                    <div class="product-name1">Lorem ipsum dolor siamr id tempor  Curabitur iac Lorem ipsum dolor siamr id </div>
-                    <a href="#" class="click-here1">Add to cart</a>
-                </div>
-
-
-                <div class="first-product1">
-                    <div class="imag-product">
-                        <div class="product-prize">
-                            <div class="box-61">
-                                <div class="prize-p">$120.00</div>
-                            </div>
-                        </div>
-                        <img src="/content/images/product3.png" width="100%" border="0" align="left" />
-                    </div>
-                    <div class="product-name">Lorem ipsum dolor</div>
-                    <div class="product-name1">Lorem ipsum dolor siamr id tempor  Curabitur iac Lorem ipsum dolor siamr id </div>
-                    <a href="#" class="click-here1">Add to cart</a>
-                </div>
-
-
-                <div class="first-product1">
-                    <div class="imag-product">
-                        <div class="product-prize">
-                            <div class="box-61">
-                                <div class="prize-p">$120.00</div>
-                            </div>
-                        </div>
-                        <img src="/content/images/product4.png" width="100%" border="0" align="left" />
-                    </div>
-                    <div class="product-name">Lorem ipsum dolor</div>
-                    <div class="product-name1">Lorem ipsum dolor siamr id tempor  Curabitur iac Lorem ipsum dolor siamr id </div>
-                    <a href="#" class="click-here1">Add to cart</a>
-                </div>
-
-
+                            <div class="product-name">@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Name</div>
+                            <div class="product-name1">Camiseta Real Madrid Blanca</div>
+                            <a href="#" class="click-here1">Adicionar al carrito</a>
+                        </div>                        
+                    }
+                }
 
             </div>
 
         </div>
 
 
-
+        <!--
 
 
         <div class="first-product">
@@ -325,8 +192,9 @@ vierra inted
 
 
 
+            -->
 
-
+        <!--
         <div class="socal-box">
 
             <div class="box-217">
@@ -381,13 +249,13 @@ vierra inted
 
 
         </div>
-
+            -->
 
 
 
         <div class="footer-blue">
-            <div class="need">Need assistance ?</div>
-            <a href="#" class="click-here-l">Click here</a>
+            <div class="need">Necesitas ayuda?</div>
+            <a href="#" class="click-here-l">Encuéntrala acá</a>
         </div>
 
 
@@ -402,28 +270,27 @@ vierra inted
     <div class="right-bar">
 
         <div class="add3">
-            <div class="add-heading">ARE YOU SUPPPILER ?</div>
+            <div class="add-heading">ERES UN PROVEEDOR?</div>
             <div class="add-heading1">
-                Lorem ipsum dolor sit<br />
-                amet, con
+                Véndelo con nosotros
             </div>
-            <a href="#" class="click-here">Click here</a>
+            <a href="#" class="click-here">Entérate acá</a>
         </div>
 
         <div class="add1">
             <div class="add1-tx">
-                Did you know bicycle was<br />
-                invented in 1817
+                Sabías que la bicicleta<br />
+                fué inventada en 1817?
             </div>
-            <a href="#" class="add-read">Read More</a>
+            <a href="#" class="add-read">Leer más</a>
         </div>
 
         <div class="add2">
             <div class="add1-tx">
-                Did you know soccer has<br />
-                its roots in china
+                Sabías que el fútbol tiene<br />
+                su raíz in China
             </div>
-            <a href="#" class="add-read">Read More</a>
+            <a href="#" class="add-read">Leer más</a>
         </div>
 
     </div>

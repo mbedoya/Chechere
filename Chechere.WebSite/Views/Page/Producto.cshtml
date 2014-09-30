@@ -1,0 +1,639 @@
+﻿@model Plenum.Models.PlenumPageDataModel
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = Model.Page.Name;
+    ViewBag.MetaKeywords = Model.Page.GetFieldValue("MetaKeywords");
+    ViewBag.MetaDescription = Model.Page.GetFieldValue("MetaDescription");
+}
+
+<div class="home-link">
+    <a href="/">Inicio</a>
+    <a href="#">@Model.Page.Name</a>    
+</div>
+
+
+<div class="product-full">
+
+    <div class="left-box">
+
+        <div class="left-link-box">
+            <div class="left-heading">
+                <div class="left-heading-text">Nuestras Categor&iacute;as</div>
+            </div>
+        </div>
+
+        <!--
+
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Filtrar por</div>
+
+            <div class="panel-box">
+                <section class="ac-container">
+                    <div class="border-g">
+                        <input id="ac-1" name="accordion-1" type="radio" checked />
+                        <label for="ac-1">Category</label>
+                        <article class="ac-small">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-2" name="accordion-1" type="radio" />
+                        <label for="ac-2">Brand</label>
+                        <article class="ac-medium">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-3" name="accordion-1" type="radio" />
+                        <label for="ac-3">Color</label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="border-g">
+                        <input id="ac-4" name="accordion-1" type="radio" />
+                        <label for="ac-4">Offer</label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="border-g">
+                        <input id="ac-5" name="accordion-1" type="radio" />
+                        <label for="ac-5">Apparel Men Size </label>
+                        <article class="ac-large">
+                            <div class="ul-box-left">
+                                <ul>
+                                    <li><a href="#">• T-Shirts (205)</a></li>
+                                    <li><a href="#">• Shirts (456)</a></li>
+                                    <li><a href="#">• Jeans (400) </a></li>
+                                    <li><a href="#">• Trousers (200) </a></li>
+                                    <li><a href="#">• Inner Wear (50)</a></li>
+                                    <li><a href="#">• Blazers (40)</a></li>
+                                    <li><a href="#">• Night Wear (30)</a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                    <li><a href="#">• Night Wear (30) </a></li>
+                                    <li><a href="#">• Sports Wear (40)</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+        </div>
+
+        -->
+
+        <!--
+
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Price Filter</div>
+            <div class="bar-box">
+                <img src="images/bar.png" width="235" height="18" border="0" align="left" />
+                <div class="prize-1">$22</div>
+                <div class="prize-2">$1325</div>
+            </div>
+
+        </div>
+
+            -->
+
+        <!-- 
+        <div class="left-blue-box1">
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">1 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">2 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">3 Person</div>
+            </div>
+            <div class="chack-box">
+                <div class="ch1">
+                    <input name="" type="checkbox" value="" />
+                </div>
+                <div class="ch-tx">4 Person</div>
+            </div>
+        </div>
+
+            -->
+        <!--
+        
+        <div class="left-blue-box">
+            <div class="thanks-heading1">Featured Products</div>
+
+            <div class="left-product-box">
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p2.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Hi Neck Men Shoe  </div>
+                        <div class="p-prize">$60.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p3.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Women' s Trouser</div>
+                        <div class="p-prize">$48.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p4.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Sports Wear</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p5.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Shirt</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p6.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Denim</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p7.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men ' s Trouser</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p8.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Men' s Sandal</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+                <div class="product-border">
+                    <div class="product-img">
+                        <img src="images/p9.png" border="0" align="left" />
+                    </div>
+                    <div class="product-name-left">
+                        <div class="p-name">Women' s Trendy Sandal</div>
+                        <div class="p-prize">$49.00</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        -->
+
+
+
+    </div>
+
+
+
+    <div class="right-box">
+
+        <div class="gray-border">
+
+            <div class="product-full-img">
+                <!--
+                <div class="product-b">
+                    <a href="#">
+                        <img src="images/arow-top.png" width="17" height="8" border="0" align="left" class="margin-left" /></a>
+                    <img src="images/s1.png" width="44" height="40" border="0" align="left" />
+                    <img src="images/s2.png" width="44" height="40" border="0" align="left" />
+                    <img src="images/s3.png" width="44" height="40" border="0" align="left" />
+                    <img src="images/s4.png" width="44" height="40" border="0" align="left" />
+                    <img src="images/s5.png" width="44" height="40" border="0" align="left" />
+                    <img src="images/s5.png" width="44" height="40" border="0" align="left" />
+                    <a href="#">
+                        <img src="images/arow-bottom.png" width="17" height="8" border="0" align="left" class="margin-left" /></a>
+                </div>
+                -->
+                <div class="product-big">
+                    <img src="@Model.Page.GetFileFieldUrl("MainImage")" width="342" height="347" border="0" usemap="#Map2" />
+                    <!--
+                    <map name="Map2" id="Map2">
+                        <area shape="rect" coords="2,155,25,190" href="#" />
+                        <area shape="rect" coords="318,159,341,190" href="#" />
+                    </map>
+                        -->
+                </div>
+            </div>
+
+
+            <div class="box-360">
+                <div class="heading-pa1">@Model.Page.Name</div>
+
+                <div class="select-box">
+
+                    <div class="box-112">
+                        <div class="color-name">Color:</div>
+                        <select class="seclect-color">
+                            <option>Green</option>
+                            <option>Red</option>
+                        </select>
+                        <a href="#" class="show-link">Show color chart</a>
+                    </div>
+
+                    <div class="box-85">
+                        <div class="color-name">Size</div>
+                        <select class="seclect-color">
+                            <option>Xl</option>
+                            <option>1</option>
+                        </select>
+                        <a href="#" class="show-link">Show size chart</a>
+                    </div>
+
+                    <div class="box-85">
+                        <div class="color-name">Quantity</div>
+                        <select class="seclect-color">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="ave">Available in   Today, 3 days, 20 days  <span class="color-blue">?</span></div>
+
+                <div class="prize-box">
+                    <div class="box-prize">$200.00</div>
+                    <div class="star">
+                        <img src="images/star.png" width="95" height="14" border="0" align="left" />
+                        &nbsp;(20)</div>
+                </div>
+
+                <div class="p-cut"><span class="cut">$100.00</span> save $200.00 (20%)  </div>
+
+                <a href="#" class="add-to">Add to cart</a>
+
+            </div>
+
+            <!--
+
+
+            <div class="rating-box">
+
+                <div class="box-220">
+                    <div class="profile-img-box">
+                        <img src="images/profiile.png" width="57" height="57" border="0" align="left" class="profile-img" />
+                        <div class="profile-name">
+                            <div class="name-profile">Sahil David</div>
+                            <div class="date-profile">Feb 27, 14</div>
+                            <div class="star-p">
+                                <img src="images/star1.png" width="60" height="11" border="0" align="left" /></div>
+                        </div>
+                        <div class="profile-text">"Rem ipsum dolor sit am, consectetuaipiscing elit. Pellentesque a cursus felis."</div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="box-220">
+                    <div class="profile-img-box">
+                        <img src="images/profile2.png" width="57" height="57" border="0" align="left" class="profile-img" />
+                        <div class="profile-name">
+                            <div class="name-profile">Raj Thakur</div>
+                            <div class="date-profile">Mar 15, 14</div>
+                            <div class="star-p">
+                                <img src="images/star2.png" width="60" height="11" border="0" align="left" /></div>
+                        </div>
+                        <div class="profile-text">Donec vehicula elementum augue, ut aliquam metus semper et. Ut placenas sed auctor nibh.</div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="box-220">
+                    <div class="profile-img-box">
+                        <img src="images/profile3.png" width="57" height="57" border="0" align="left" class="profile-img" />
+                        <div class="profile-name">
+                            <div class="name-profile">Ravinder</div>
+                            <div class="date-profile">Apr 20, 14</div>
+                            <div class="star-p">
+                                <img src="images/star3.png" width="60" height="11" border="0" align="left" /></div>
+                        </div>
+                        <div class="profile-text">retium. Quisque vulputate sem sed augue dict interdum. Vivamus dictum tortor auctor odio .</div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            -->
+
+        </div>
+
+
+
+
+        <div class="tab-box">
+            <div class="tab-full">
+                <div class="tab-link">
+                    <ul id="menu" class="menu">
+                        <li class="active"><a href="#description">Descripci&oacute;n</a></li>
+                        <!--  <li><a href="#usage">TechnicalDetail</a></li> -->
+                    </ul>
+                </div>
+
+                <div id="description" class="content1">
+                    <div class="tab-gray">
+                        <div class="text-tab">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a cursus felis. Vivamus nisl dolor, porta sed volutpat et, consectetur et velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vulputate fermentum metus id pellentesque. Nunc id ante diam. Morbi convallis enim a leo lacinia, ut scelerisque augue consectetur. Ut in velit tellus. Sed eget tristique justo, eu varius est. Maecenas quam lectus, dignissim in pharetra in, lobortis a nisi. Mauris erat sem, elementum quis semper ac, cursus in ipsum.Ut in velit tellus. sectetur et velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vulputate fermentum m.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="share-box">
+                <div class="share-l">Share:</div>
+                <div class="tab-socal">
+                    <a href="#">
+                        <img src="images/facebook.png" width="32" height="31" border="0" align="left" /></a>
+                    <a href="#">
+                        <img src="images/twiter.png" width="32" height="31" border="0" align="left" /></a>
+                    <a href="#">
+                        <img src="images/p-icon1.png" width="32" height="31" border="0" align="left" /></a>
+                    <a href="#">
+                        <img src="images/g-plus.png" width="32" height="31" border="0" align="left" /></a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!--
+
+
+        <div class="gray-border">
+
+            <div class="box-375">
+                <div class="heading-h1">Are you on a budget ?</div>
+                <div class="image-box">
+                    <div class="p-image">
+                        <img src="images/p10.png" width="100%" /></div>
+                    <div class="pg-text">
+                        <div class="col1">Colombia national
+                            <br />
+                            team polo</div>
+                        <div class="prize-box">
+                            <div class="box-prize">$200.00</div>
+                        </div>
+                        <div class="cut-1">$100.00</div>
+                        <div class="cut-2">save $200.00 (19%)  </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box-375">
+                <div class="heading-h1">Lokking for a prime product ?</div>
+                <div class="image-box">
+                    <div class="p-image">
+                        <img src="images/p11.png" width="100%" /></div>
+                    <div class="pg-text">
+                        <div class="col1">Colombia national
+                            <br />
+                            team polo</div>
+                        <div class="prize-box">
+                            <div class="box-prize">$200.00</div>
+                        </div>
+                        <div class="cut-1">$100.00</div>
+                        <div class="cut-2">save $200.00 (19%)  </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="p-plus">
+                <div class="heading-h1">Buy them together </div>
+
+                <div class="box-204">
+                    <div class="s1-img">
+                        <img src="images/s6.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <div class="plus-img">
+                    <img src="images/plus.png" width="16" height="16" /></div>
+
+                <div class="box-204">
+                    <div class="s1-img">
+                        <img src="images/s7.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <div class="plus-img">
+                    <img src="images/plus.png" width="16" height="16" /></div>
+
+                <div class="box-204">
+                    <div class="s1-img">
+                        <img src="images/s8.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+
+                <div class="plus-img">
+                    <img src="images/bar1.png" /></div>
+
+                <div class="box-75">
+                    <div class="pre">$99.999</div>
+                    <div class="pre1">save</div>
+                    <div class="pre2">15%</div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        -->
+
+        <div class="slider-box-m">
+            <div class="heading-h2">Otros en la misma Categoría</div>
+            <div class="full-slider">
+                <!--
+                <div class="left-arow1"><a href="#">
+                    <img src="images/arow-left.png" width="12" height="26" border="0" align="left" /></a></div>
+                    -->
+
+                <div class="box-178">
+                    <div class="s1-img">
+                        <img src="/content/images/sa1.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <div class="box-178">
+                    <div class="s1-img">
+                        <img src="/content/images/sa2.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <div class="box-178">
+                    <div class="s1-img">
+                        <img src="/content/images/sa3.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <div class="box-178">
+                    <div class="s1-img">
+                        <img src="/content/images/sa4.png" width="100%" border="0" align="left" /></div>
+                    <div class="s1-text">Lorem ipsum dolor sit amet, cosectetur adipiscing elit. </div>
+                    <div class="box-prize">$200.00</div>
+                </div>
+
+                <!--
+                <div class="right-arow1"><a href="#">
+                    <img src="images/arow-right.png" width="12" height="26" border="0" align="left" /></a></div>
+                    -->
+            </div>
+        </div>
+
+
+
+
+        <div class="contact-b">
+            <div class="footer-blue">
+                <div class="need">Necesitas ayuda?</div>
+                <a href="#" class="click-here-l">Encuéntrala acá</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,195 @@
+﻿@using System.Web.Optimization
+
+@{
+    //string siteName = WebSite.WebUtilities.Misc.GetAppSetting(WebSite.WebUtilities.Const.AppSettings.SiteName);
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Chechere</title>
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <!-- <link href="/content/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/> -->
+    @Styles.Render("~/Content/css/style.css")
+    @Styles.Render("~/Content/css/panel.css")
+    @Styles.Render("~/Content/css/drop_down-nevi.css")
+
+</head>
+<body>
+
+
+    <!------------Header-Open------------------>
+
+    <div class="header-box">
+        <div class="wrapper">
+            <div class="header">
+
+                <div class="flag">
+                    &nbsp;
+                </div>
+
+
+                <div class="socal">
+                    <!-- 
+                    <a href="#">
+                        <img src="/content/images/face.png" width="8" height="16" border="0" align="left" /></a> -->
+                    <a href="#">
+                        <img src="/content/images/twitter.png" width="18" height="15" border="0" align="left" /></a>
+                    <a href="#">
+                        <img src="/content/images/instagram.png" width="19" height="17" border="0" align="left" /></a>
+                    <!-- 
+                    <a href="#">
+                        <img src="/content/images/google.png" width="19" height="17" border="0" align="left" /></a>
+                    <a href="#">
+                        <img src="/content/images/p-icon.png" width="13" height="17" border="0" align="left" /></a> -->
+                </div>
+
+                <div class="top-link">
+                    <!-- <a href="index.html" class="top-home">Home</a> -->
+                    <!--  <a href="#" class="top-home1">My Wishlist</a> -->
+                    <a href="#" class="top-home2">Checkout</a>
+                </div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="secound-header">
+        <div class="wrapper">
+            <div class="secoud-header-box">
+                <a href="/" title="Bitsnes">
+                    <img src="/content/images/logo.png" width="232" height="61" border="0" align="left" /></a>
+
+                <div class="search-box">
+                    <input type="text" class="form-input-name" placeholder="Escribe acá lo que deseas" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" />
+                    <div class="search-bg">
+                        <div class="gray-line-search"></div>
+                        <a href="#" class="ad-link1"><img src="/content/images/search-icon.png" width="18" height="18" border="0" /></a>
+                        <!-- <a href="#" class="ad-link">advance</a> -->
+                            
+
+                    </div>
+                </div>
+
+                <div class="right-lint-header">                    
+                    <a href="#" class="login-link1">Mi Carrito (0)</a>
+                </div>
+
+
+                <div class="nevi-box">
+                    <div class="menu4">
+
+                        <ul>
+                            <li>
+                                <a href="/" title="home">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="/" title="home">Pregunta por lo que necesites</a>
+                            </li>
+                            <li>
+                                <a href="/" title="home">Contacto</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!------------Header-End------------------>
+
+    <!------------container-Open------------------>
+
+
+    <div class="content-box-profile">
+        <div class="wrapper">
+            <div class="connter-box">                
+
+                @RenderBody()
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!------------container-End------------------>
+
+    <!------------Footer-Open------------------>
+
+    
+    <div class="footer-box">
+        <div class="wrapper">
+            <div class="footer-container">
+
+                <div class="box-376">
+                    <div class="footer-heading">Cómo comprar?</div>
+                    <div class="footer-heading1">Para comprar debes...</div>
+                </div>
+
+                <div class="box-379">
+                    <div class="footer-heading">Cómo vender con nosotros?</div>
+                    <div class="footer-heading1">Para vender con nosotros debes...</div>
+                    <div class="footer-forem">                        
+                        <a href="/Contacto">Contáctanos</a>
+                    </div>
+                </div>
+
+                <div class="box-136">
+                    <div class="footer-heading">Info</div>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Políticas de Privacidad </a>                    
+                </div>
+
+                <div class="box-136a">
+                    <div class="footer-heading">Síguenos</div>                    
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>                    
+                </div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="footer-gray">
+        <div class="wrapper">
+
+            <div class="copy">Copyright © 2014 Bitness. Todos los derechos reservados</div>
+
+            
+            <div class="paypal" style="height: 22px;">
+                <!-- 
+                <img src="/content/images/paypal.png" width="179" height="22" border="0" align="left" usemap="#Map" />
+                <map name="Map" id="Map">
+                    <area shape="rect" coords="2,-2,38,23" href="#" />
+                    <area shape="rect" coords="41,3,78,23" href="#" />
+                    <area shape="rect" coords="90,3,124,19" href="#" />
+                    <area shape="rect" coords="143,1,180,23" href="#" />
+                </map>
+                    -->
+            </div>
+                
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!------------Footer-End------------------>
+
+    <div class="clear"></div>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

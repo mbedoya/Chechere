@@ -94,7 +94,7 @@
             </div>
 
             <br />
-            <input type="submit" value="Save" />
+            <input id="btnSubmit" type="submit" value="Save" />
         </form>
 
         <div style="display: none; overflow: visible">
@@ -240,6 +240,10 @@
                         $("#" + selected_reference).val(data.node.text + " {" + data.node.id + "}");
                     }
                     
+                });
+
+                $("#btnSubmit").on("click", function () {
+                    window.parent.updateContentTree();
                 });
 
             });

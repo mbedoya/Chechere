@@ -28,6 +28,12 @@
         var selected_node_id = null;
         var selected_node_text = null;
 
+        function updateContentTree() {
+
+            var tree = $("#siteContent").jstree(true);            
+            tree.refresh();
+        }
+
         $(document).ready(function () {
 
             $('#siteContent').jstree({

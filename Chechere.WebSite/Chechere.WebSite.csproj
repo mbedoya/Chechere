@@ -231,6 +231,7 @@
     <Content Include="Content\images\img4.png" />
     <Content Include="Content\images\img5.png" />
     <Content Include="Content\images\img6.png" />
+    <Content Include="Content\images\instagram.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\m-arow.png" />
     <Content Include="Content\images\map.jpg" />
@@ -665,6 +666,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\products\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -733,6 +735,11 @@
   <ItemGroup>
     <Content Include="Views\ManageFile\Edit.cshtml" />
     <Content Include="Views\ManageFile\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Chechere.pubxml" />
+    <Content Include="Views\Page\Categoria.cshtml" />
+    <Content Include="Views\Page\Producto.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
